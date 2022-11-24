@@ -5,7 +5,38 @@ import Explanation from "../components/Explanation.astro";
 
 <Layout>
   <Explanation>
-    <div slot="text">hey</div>
+    <div slot="text">
+      <div>
+        <p class="font-semibold text-gray-800">
+          Why was the COVID-19 vaccine an mRNA vaccine?
+        </p>
+
+        <div class="mt-4 w-16 h-px bg-gray-200"></div>
+      </div>
+      <div class="mt-4 text-gray-600 leading-relaxed space-y-4">
+        <p>Usually, vaccines contain a weakend version of the live virus.</p>
+        <p>However, with COVID-19 this wasn’t possible for two reasons:</p>
+        <ol class="list-decimal ml-6 space-y-1">
+          <li>
+            Even a weakened version of the virus could still have harmed
+            immunocompromised people.
+          </li>
+          <li>
+            The virus was mutating quickly, and there was a chance that the
+            virus you were vaccinated with would be significantly different than
+            the virus you’d later be exposed to.
+          </li>
+        </ol>
+        <p>
+          Instead, the COVID-19 mRNA vaccine delivered the genetic information
+          of the (fairly stable) spike proteins on the virus.
+        </p>
+        <p>
+          This genetic information provokes the body into an immune response,
+          readying it for future exposure to the virus.
+        </p>
+      </div>
+    </div>
     <div slot="demo">demo</div>
   </Explanation>
 </Layout>
