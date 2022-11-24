@@ -37,6 +37,61 @@ import Explanation from "../components/Explanation.astro";
         </p>
       </div>
     </div>
-    <div slot="demo">demo</div>
+
+    <div slot="demo">
+      <div class="mt-2 grid justify-items-end gap-y-4">
+        <div
+          class="grid grid-cols-[repeat(7,max-content)] items-center gap-x-3"
+        >
+          <p class="text-right text-sm font-medium text-gray-400 mr-2">
+            virus in<br />vaccine
+          </p>
+          {
+            new Array(6)
+              .fill(null)
+              .map(() => (
+                <div class="h-12 w-12 rounded-full bg-gradient-to-br from-amber-500 to-red-500" />
+              ))
+          }
+        </div>
+        <div
+          class="grid grid-cols-[repeat(7,max-content)] items-center gap-x-3"
+        >
+          <p class="text-right text-sm font-medium text-gray-400 mr-2">
+            virus in<br />world
+          </p>
+          <div
+            class="h-12 w-12 rounded-full bg-gradient-to-br from-amber-500 to-red-500"
+          >
+          </div>
+          <div
+            class="h-12 w-12 rounded-full bg-gradient-to-br from-amber-500 to-pink-500"
+          >
+          </div>
+          <div
+            class="h-12 w-12 rounded-full bg-gradient-to-br from-orange-500 to-fuchsia-500"
+          >
+          </div>
+          <div
+            class="h-12 w-12 rounded-full bg-gradient-to-br from-rose-500 to-indigo-400"
+          >
+          </div>
+          <div
+            class="h-12 w-12 rounded-full bg-gradient-to-br from-rose-400 to-blue-500"
+          >
+          </div>
+          <div
+            class="h-12 w-12 rounded-full bg-gradient-to-br from-fuchsia-400 to-blue-500"
+          >
+          </div>
+        </div>
+      </div>
+      <p
+        class="mt-2 italic text-gray-300 font-medium text-sm text-right mr-[1.125rem]"
+      >
+        <span class="mr-16">virus mutates over time &rarr;</span>
+        <span>no longer a match &uarr;</span>
+      </p>
+    </div>
   </Explanation>
 </Layout>
