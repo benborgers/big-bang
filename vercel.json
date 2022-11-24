@@ -1,0 +1,6 @@
+{
+  "redirects": [{ "source": "/", "destination": "/biology" }],
+  "github": {
+    "silent": true
+  }
+}
