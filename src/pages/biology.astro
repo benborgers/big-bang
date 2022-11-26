@@ -41,7 +41,7 @@ import Explanation from "../components/Explanation.astro";
     <section slot="demo" x-data="{ selected: 1 }" x-cloak>
       <div class="mt-2 grid justify-items-end gap-y-4">
         <div
-          class="grid grid-cols-[repeat(7,max-content)] items-center gap-x-3"
+          class="grid grid-cols-[repeat(7,max-content)] items-center gap-x-2 sm:gap-x-3"
         >
           <p class="text-right text-sm font-medium text-gray-400 mr-2">
             virus in<br />vaccine
@@ -49,8 +49,8 @@ import Explanation from "../components/Explanation.astro";
           {
             new Array(6).fill(null).map(() => (
               <div
-                class="rounded-full overflow-hidden outline-2 outline-dashed outline-offset-2 transition-all"
-                x-bind:class="{ 'outline-transparent': selected === 1, 'outline-red-600': selected === 2 }"
+                class="rounded-full overflow-hidden border-2 border-dashed transition-all"
+                x-bind:class="{ 'border-transparent': selected === 1, 'border-red-600': selected === 2 }"
               >
                 <div class="h-9 w-9 md:h-12 md:w-12 bg-gradient-to-br from-amber-500 to-red-500" />
               </div>
@@ -58,7 +58,7 @@ import Explanation from "../components/Explanation.astro";
           }
         </div>
         <div
-          class="grid grid-cols-[repeat(7,max-content)] items-center gap-x-3"
+          class="grid grid-cols-[repeat(7,max-content)] items-center gap-x-2 sm:gap-x-3"
         >
           <p class="text-right text-sm font-medium text-gray-400 mr-2">
             virus in<br />world
@@ -73,8 +73,8 @@ import Explanation from "../components/Explanation.astro";
               ["from-fuchsia-400", "to-blue-500"],
             ].map(([from, to]) => (
               <div
-                class="rounded-full overflow-hidden outline-2 outline-dashed outline-offset-2 transition-all"
-                x-bind:class="{ 'outline-transparent': selected === 1, 'outline-red-600': selected === 2 }"
+                class="rounded-full overflow-hidden border-2 border-dashed transition-all"
+                x-bind:class="{ 'border-transparent': selected === 1, 'border-red-600': selected === 2 }"
               >
                 <div
                   class:list={[
