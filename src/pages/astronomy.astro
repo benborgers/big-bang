@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Explanation from "../components/Explanation.astro";
+---
+
+<Layout>
+  <Explanation>
+    <section slot="text">
+      <div>
+        <p class="font-semibold text-gray-800">
+          When’s the next time Earth will be hit by a asteroid or meteorite?
+        </p>
+
+        <div class="mt-4 w-16 h-px bg-gray-200"></div>
+      </div>
+      <div class="mt-4 text-gray-600 leading-relaxed space-y-4">
+        <p>
+          Meteorites land on Earth all the time! Every 30 seconds, a meteorite
+          1mm in diameter lands on Earth. But the objects that we care more
+          about are the <em>bigger</em> ones.
+        </p>
+        <p>
+          Around once a year, a meteorite 4 meters in diameter lands on Earth.
+          And around every thousand years, a 90 meter asteroid lands on Earth.
+        </p>
+        <p>
+          Around every million years, an asteroid hits the Earth that causes an
+          impact as powerful as the entire global nuclear arsenal.
+        </p>
+        <p>
+          And every 100 million years or so, an asteroid the size of the one
+          that killed the dinosaurs hits the Earth. Plus, that asteroid hit 66
+          million years ago...
+        </p>
+      </div>
+    </section>
+
+    <section slot="demo" x-data="{ value: '1' }" x-cloak class="relative">
+      <div class="text-gray-800 font-bold text-xl">
+        <p x-show="value === '1'">About 120 times per hour.</p>
+        <p x-show="value === '2'">About once per year.</p>
+        <p x-show="value === '3'">
+          Approximately 5 times since the Great Pyramids of Giza were built.
+        </p>
+        <p x-show="value === '4'">
+          Approximately once per million years — 3 times longer than
+          <em>Homo sapiens</em> have existed.
+        </p>
+        <p x-show="value === '5'">
+          Last time this happened, it wiped out the dinosaurs.
+        </p>
+      </div>
+      <input
+        type="range"
+        min="1"
+        max="5"
+        x-model="value"
+        class="mt-8 block w-full appearance-none bg-gray-100 border border-gray-200 rounded-full"
+      />
+      <div class="mt-1 flex justify-between font-medium text-sm text-gray-400">
+        <p>1mm</p>
+        <p>4m</p>
+        <p>90m</p>
+        <p>400m</p>
+        <p>9km</p>
+      </div>
+
+      <p class="mt-1 text-sm font-medium italic text-gray-400 ml-4">
+        Object size &rarr;
+      </p>
+
+      <img
+        src="/dino.png"
+        class="absolute inset-0 mx-auto -translate-y-[20%] select-none pointer-events-none transition-opacity duration-300"
+        x-bind:class="{ 'opacity-5': value === '5', 'opacity-0': value !== '5' }"
+        alt="A drawing of a dinosaur with an explosion in the background."
+      />
+    </section>
+  </Explanation>
+</Layout>

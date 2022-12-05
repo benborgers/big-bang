@@ -1,13 +1,13 @@
 <div
   class:list={[
-    "min-h-screen p-4 max-lg:pb-36 grid grid-rows-[max-content,max-content] lg:grid-rows-1 lg:grid-cols-2 gap-x-8 gap-y-8 h-full lg:items-center",
+    "p-4 max-lg:pb-36 grid grid-rows-[max-content,max-content] lg:grid-rows-1 lg:grid-cols-2 gap-x-16 gap-y-8 h-full lg:items-center",
     "max-w-lg lg:max-w-screen-lg mx-auto",
   ]}
 >
   <div>
     <slot name="text" />
   </div>
-  <div class="justify-self-center lg:justify-self-end">
+  <div class="justify-self-center lg:justify-self-end w-full">
     <slot name="demo" />
   </div>
 </div>

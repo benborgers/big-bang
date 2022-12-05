@@ -1,5 +1,5 @@
 {
-  "redirects": [{ "source": "/", "destination": "/biology" }],
+  "redirects": [{ "source": "/", "destination": "/astronomy" }],
   "cleanUrls": true,
   "trailingSlash": false,
   "github": {
